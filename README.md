@@ -1,11 +1,11 @@
 # Shipper Mock App
 ## Deployment
-The app is deployed using Heroku. 
+The app is deployed using Vercel. 
 
 You can access it here:
 
 - ~~https://shipper-yosia.herokuapp.com/~~
-- ~~Might take a while for Heroku to spin up the app in Free Tier~~
+  - ~~Might take a while for Heroku to spin up the app in Free Tier~~
 
 - https://congenial-rotary-phone-mu.vercel.app/
   - Used Vercel instead of Heroku for better Lighthouse score

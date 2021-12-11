@@ -12,8 +12,8 @@ import { useState } from "react";
 export default function Driver() {
   const { data, error, loading } = useFetchDriverData();
   const [cursor, setCursor] = useState(0);
+  const [nameFilter, setNameFilter] = useState("");
   const pageSize = 5;
-  const activeDriverData = data.slice(cursor, cursor + pageSize);
   const noMoreData = cursor + pageSize >= data.length;
   const isPrevBtnDisabled = cursor < 1;
 
@@ -25,10 +25,37 @@ export default function Driver() {
     setCursor(cursor + 5);
   }
 
+  function handleFilterInput(
+    e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
+  ) {
+    e.preventDefault();
+    setNameFilter(e.target.value);
+  }
+
   function driverList() {
     if (loading) return <div>Loading driver data</div>;
     if (error) return <div>Error while getting driver data</div>;
-    return activeDriverData.map((driver, idx) => {
+    if (nameFilter) {
+      return data
+        .filter((driver) =>
+          driver.name.first.toLowerCase().includes(nameFilter.toLowerCase())
+        )
+        .map((driver, idx) => {
+          return (
+            <DriverCard
+              key={idx}
+              id={driver.id.value}
+              firstName={driver.name.first}
+              lastName={driver.name.last}
+              phoneNumber={driver.phone}
+              email={driver.email}
+              birthdate={driver.dob.date}
+              picture={driver.picture.thumbnail}
+            />
+          );
+        });
+    }
+    return data.slice(cursor, cursor + pageSize).map((driver, idx) => {
       return (
         <DriverCard
           key={idx}
@@ -58,6 +85,8 @@ export default function Driver() {
             size="small"
             type="text"
             placeholder="Cari Driver"
+            value={nameFilter}
+            onChange={handleFilterInput}
             startAdornment={
               <InputAdornment position="start">
                 <SearchIcon />

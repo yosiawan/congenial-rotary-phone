@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sidebar View test Renders successfully 1`] = `ShallowWrapper {}`;
+
+exports[`Sidebar View test renders successfully 1`] = `ShallowWrapper {}`;

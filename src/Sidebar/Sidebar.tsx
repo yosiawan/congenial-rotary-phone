@@ -11,6 +11,7 @@ import Toolbar from "@mui/material/Toolbar";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import HomeIcon from "@mui/icons-material/Home";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
+import SidebarItem from "./SidebarItem";
 
 const drawerWidth = 300;
 
@@ -73,17 +74,13 @@ export default function Sidebar(props: TSidebarProps) {
         <Toolbar />
         {sidebarItems.map((item, idx) => {
           return (
-            <div
+            <SidebarItem
               key={idx}
               onClick={() => navigate(item.route)}
-              className={`
-                main-sidebar__item ${
-                  isItemActive(item) ? "active" : "inactive"
-                }`}
-            >
-              <div>{item.icon}</div>
-              <div>{item.title}</div>
-            </div>
+              isActive={isItemActive(item)}
+              icon={item.icon}
+              title={item.title}
+            />
           );
         })}
       </Drawer>
@@ -98,17 +95,13 @@ export default function Sidebar(props: TSidebarProps) {
         <Toolbar />
         {sidebarItems.map((item, idx) => {
           return (
-            <div
+            <SidebarItem
               key={idx}
               onClick={() => navigate(item.route)}
-              className={`
-                main-sidebar__item ${
-                  isItemActive(item) ? "active" : "inactive"
-                }`}
-            >
-              <div>{item.icon}</div>
-              <div>{item.title}</div>
-            </div>
+              isActive={isItemActive(item)}
+              icon={item.icon}
+              title={item.title}
+            />
           );
         })}
       </Drawer>

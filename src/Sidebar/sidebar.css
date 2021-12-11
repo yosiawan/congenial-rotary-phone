@@ -1,0 +1,14 @@
+.main-sidebar__container {
+  width: 25%;
+  height: 100%;
+  top: 60px;
+  background-color: white;
+}
+
+.inactive {
+  border-left: 5px solid white;
+}
+.active {
+  border-left: 5px solid red;
+  color: red;
+}

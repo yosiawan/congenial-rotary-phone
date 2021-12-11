@@ -76,8 +76,10 @@ export default function Sidebar(props: TSidebarProps) {
             <div
               key={idx}
               onClick={() => navigate(item.route)}
-              className={isItemActive(item) ? "active" : "inactive"}
-              style={{ padding: 10, display: "flex", gap: 10 }}
+              className={`
+                main-sidebar__item ${
+                  isItemActive(item) ? "active" : "inactive"
+                }`}
             >
               <div>{item.icon}</div>
               <div>{item.title}</div>

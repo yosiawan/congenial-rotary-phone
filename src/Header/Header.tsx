@@ -25,7 +25,7 @@ export default function Header(props: THeaderProps) {
             <MenuIcon />
           </IconButton>
           <img
-            style={{ margin: "auto 5px" }}
+            style={{ margin: "auto 5px", maxHeight: 30 }}
             src={shipperLogo}
             alt="Shipper's Logo"
             title="Shipper"

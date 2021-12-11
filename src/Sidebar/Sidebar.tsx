@@ -21,7 +21,7 @@ type TSidebarItem = {
 };
 const sidebarItems: TSidebarItem[] = [
   {
-    title: "Menu A",
+    title: "Beranda",
     route: ROUTE_MENU_A,
     icon: <HomeIcon />,
   },
@@ -31,7 +31,7 @@ const sidebarItems: TSidebarItem[] = [
     icon: <AccountCircle />,
   },
   {
-    title: "Menu C",
+    title: "Pickup",
     route: ROUTE_MENU_C,
     icon: <CalendarTodayIcon />,
   },

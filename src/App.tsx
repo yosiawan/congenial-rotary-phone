@@ -9,6 +9,8 @@ import {
   ROUTE_MENU_C,
 } from "./constants/routes";
 import ComingSoon from "./ComingSoon/ComingSoon";
+import Driver from "./Driver/Driver";
+import "./App.css";
 
 function App() {
   const [sidebarOpenInMobile, setSidebarOpenInMobile] = useState(false);

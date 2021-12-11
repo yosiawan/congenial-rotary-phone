@@ -27,7 +27,6 @@
   justify-content: center;
   display: flex;
   margin: 20px;
-  padding: 20px;
 }
 
 @media screen and (max-width: 600px) {

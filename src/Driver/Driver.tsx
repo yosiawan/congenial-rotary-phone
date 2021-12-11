@@ -8,6 +8,7 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import "./driver.css";
 import useFetchDriverData from "./hooks/useFetchDriverData";
 import { useState } from "react";
+import Placeholder from "../Placeholder/Placeholder";
 
 export default function Driver() {
   const { data, error, loading } = useFetchDriverData();
@@ -33,8 +34,8 @@ export default function Driver() {
   }
 
   function driverList() {
-    if (loading) return <div>Loading driver data</div>;
-    if (error) return <div>Error while getting driver data</div>;
+    if (loading) return <Placeholder text="Loading driver data" />;
+    if (error) return <Placeholder text="Error while getting driver data" />;
     if (nameFilter) {
       return data
         .filter((driver) =>

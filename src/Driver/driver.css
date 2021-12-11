@@ -1,0 +1,51 @@
+/* Hide scrollbars */
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+}
+
+.driver-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 20px;
+  gap: 20px;
+}
+
+.driver-header-search {
+  display: flex;
+  gap: 20px;
+}
+
+.driver-list-container {
+  display: flex;
+  overflow: auto;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.driver-footer {
+  justify-content: center;
+  display: flex;
+  margin: 20px;
+  padding: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .driver-header {
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    padding: 20px;
+  }
+
+  .driver-header-search {
+    flex-direction: column;
+  }
+
+  .driver-list-container {
+    display: "flex";
+    overflow: "auto";
+    flex-direction: column;
+    margin-top: 20;
+  }
+}

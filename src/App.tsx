@@ -30,7 +30,7 @@ function App() {
           <Toolbar />
           <Routes>
             <Route path="/" element={<div>Welcome to Shipper</div>} />
-            <Route path={ROUTE_DRIVER_MGMT} element={<ComingSoon />} />
+            <Route path={ROUTE_DRIVER_MGMT} element={<Driver />} />
             <Route path={ROUTE_MENU_A} element={<ComingSoon />} />
             <Route path={ROUTE_MENU_C} element={<ComingSoon />} />
             <Route path="*" element={<div>Page Not Found</div>} />

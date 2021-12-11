@@ -1,0 +1,48 @@
+.driver-card__container {
+  background-color: white;
+}
+
+.driver-card__id {
+  color: red;
+}
+
+.divider {
+  padding: 20px;
+  display: flex;
+  border-bottom: 2px solid grey;
+  min-width: 300px;
+  justify-content: space-between;
+}
+
+.driver-card__body {
+  padding: 20px;
+}
+
+.driver-card__field {
+  margin-top: 20px;
+}
+
+.driver-card__field-value {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.driver-card__profile-pic {
+  font-size: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin-top: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .driver-card__field.no-mobile {
+    display: none;
+  }
+  .divider {
+    min-width: 0px;
+  }
+  .driver-card__body {
+    display: flex;
+    gap: 20px;
+  }
+}

@@ -77,12 +77,10 @@ export default function Sidebar(props: TSidebarProps) {
               key={idx}
               onClick={() => navigate(item.route)}
               className={isItemActive(item) ? "active" : "inactive"}
-              style={{ padding: 10 }}
+              style={{ padding: 10, display: "flex", gap: 10 }}
             >
-              <div style={{ display: "flex" }}>
-                <div>{item.icon}</div>
-                <div>{item.title}</div>
-              </div>
+              <div>{item.icon}</div>
+              <div>{item.title}</div>
             </div>
           );
         })}
@@ -101,13 +99,13 @@ export default function Sidebar(props: TSidebarProps) {
             <div
               key={idx}
               onClick={() => navigate(item.route)}
-              className={isItemActive(item) ? "active" : "inactive"}
-              style={{ padding: 10 }}
+              className={`
+                main-sidebar__item ${
+                  isItemActive(item) ? "active" : "inactive"
+                }`}
             >
-              <div style={{ display: "flex", gap: 10 }}>
-                <div>{item.icon}</div>
-                <div>{item.title}</div>
-              </div>
+              <div>{item.icon}</div>
+              <div>{item.title}</div>
             </div>
           );
         })}
